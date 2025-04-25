@@ -63,10 +63,8 @@ jobs:
         run: |
           pip install -r requirements.txt
           pip install pytest
-
-      - name: Run Tests
-        run: |
-          pytest tests/
+      - name: Run Unit Tests
+        run: PYTHONPATH=. pytest
 
   cve-scan:
     name: CVE Scan with Snyk

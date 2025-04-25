@@ -1,7 +1,7 @@
 from app.main import app
 
-def test_index():
+def test_hello():
     client = app.test_client()
-    response = client.get('/')
+    response = client.get("/")
     assert response.status_code == 200
-    assert b'Hello' in response.data
+    assert b"Hello from GitHub Actions Flask App!" in response.data
