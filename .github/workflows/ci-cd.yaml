@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: user/flask-gha-lab
+  IMAGE_NAME: shivaspk/flask-gha-lab
 
 jobs:
   build:
