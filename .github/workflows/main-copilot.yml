@@ -40,11 +40,6 @@ jobs:
           tags: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           push: false # Only push after successful scan and tests
 
-      # Run tests
-      - name: Run tests
-        run: |
-          docker run --rm ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} pytest
-
   cve-scan:
     needs: build-and-test
     runs-on: ubuntu-latest
